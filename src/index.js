@@ -35,12 +35,12 @@ io.on("connection", (socket) => {
 
     socket.join(user.room);
 
-    socket.emit("message", generateMessage("Auto Cool Guy", "Welcome!"));
+    socket.emit("message", generateMessage("Fogell", "Welcome!"));
     socket.broadcast
       .to(user.room)
       .emit(
         "message",
-        generateMessage("Auto Cool Guy", `${user.username} has joined!`)
+        generateMessage("Fogell", `${user.username} has joined!`)
       );
 
     io.to(user.room).emit("roomData", {
@@ -82,7 +82,7 @@ io.on("connection", (socket) => {
     if (user) {
       io.to(user.room).emit(
         "message",
-        generateMessage("Auto Cool Guy", `${user.username} has left!`)
+        generateMessage("Fogell", `${user.username} has left!`)
       );
       io.to(user.room).emit("roomData", {
         room: user.room,
