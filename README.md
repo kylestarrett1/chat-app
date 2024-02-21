@@ -1,4 +1,4 @@
-# Chat Room Application using Socket.IO and Node.js
+# Full Duplex Chat Room built with Node and Socket.io
 
 This repository contains a simple chat room application built using the Socket.IO library and Node.js.
 
